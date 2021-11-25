@@ -9,7 +9,8 @@ lazy val jsdocs = project
 lazy val docs = project
   .in(file("myproject-docs"))
   .settings(
-    mdocJS := Some(jsdocs)
+    mdocJS := Some(jsdocs),
   )
+  .dependsOn(jsdocs)
   .enablePlugins(MdocPlugin, DocusaurusPlugin)
 
