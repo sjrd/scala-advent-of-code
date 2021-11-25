@@ -14,19 +14,15 @@ You must log in to get your input file.
 ## Solution of Part 1
 
 ```scala mdoc:js
-import org.scalajs.dom.document
-import org.scalajs.dom.window._
-import org.scalajs.dom.html._
-import jsdocs.Progress
+import org.scalajs.dom.window.setInterval
+import scala.scalajs.js.Date
 
-val progress = Progress()
-setInterval({ () =>
-  // `node` variable is a DOM element in scope.
-  node.innerHTML = progress.tick(5)
-}, 100)
+setInterval(() => {
+  node.innerHTML = "Date is " + (new Date().toString())
+}, 1000)
 ```
 
-```scala mdoc:js:shared
+```scala mdoc
 def part1(input: List[String]): String = 
   // read the input as a sequence of Int
   val entries: Seq[Int] = input.map(_.toInt).toSeq
@@ -45,10 +41,4 @@ def part1(input: List[String]): String =
   solution match
     case Some((x, y)) => "The solution is ${x * y}"
     case None => "No solution found"
-```
-
-```scala mdoc:js:invisible
-<p>here</p>
----
-node.innerHTML = part1(List(1,2,3).map(_.toString))
 ```
