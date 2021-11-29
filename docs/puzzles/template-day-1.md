@@ -115,6 +115,8 @@ def computeAnswer(n: Int): Option[Int] =
   combinations.find(_.sum == 2020).map(_.product)
 ```
 
+### Gist
+
 The gist of this solution is https://gist.github.com/adpi2/9eaf82c559a7a24ab658ea7844cf84e3.
 You can clone and run it with:
 ```
@@ -128,6 +130,16 @@ The answer of part 2 is 96047280
 ```
 
 Replace the `day-1/input` file with your own `input` from [adventofcode.com](https://adventofcode.com/2020/day/1) to get your own solution.  
+
+### Part 1
+
+<div id="template-day-1-part-1"></div>
+
+<div id="day-2"></div>
+
+### Part 2
+
+<div id="template-day-1-part-2"></div>
 
 # Solutions from the community
 
